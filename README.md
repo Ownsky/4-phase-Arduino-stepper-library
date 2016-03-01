@@ -11,10 +11,8 @@ stepperMotor::stepperMotor(uint stepsPerLap, uchar p1, uchar p2, uchar p3, uchar
 ```
 
 **Argument**
-> |Argument       |Illustration                 |
-> |---------------|-----------------------------|
-> |*stepsPerLap* |Steps needed to rotate a lap.|
-> |*p1~p4*       |Control pins.                |
+>- *stepsPerLap:*  Steps needed to rotate a lap.
+>- *p1~p4:*        Control pins.
 
 ##Functions
 ```C++
@@ -23,9 +21,7 @@ void stepperMotor::writePin(uchar a)
 >- **Usage** 
 >  Set control pins directly with a binary. For example, 0b0101(0x5) sets pin1 to pin4 with HIGH, LOW, HIGH, LOW. 
 >- **Argument**
-> |Argument       |Illustration                 |
-> |---------------|-----------------------------|
-> |*a*            | Signal to write.            |
+>  *a:* Signal to write.
 
 ```C++
 void stepperMotor::rotate45deg(uint times, bool rDirection, uint rSpeed)
@@ -37,11 +33,9 @@ void stepperMotor::rotateShot(uint rShot, bool rDirection, uint rSpeed)
 >- **Usage**
 >  Rotate the motor for given times of 45 degrees, laps, degrees or radians.
 >- **Argument**
-> |Argument       |Illustration                 |
-> |---------------|-----------------------------|
-> |*times, deg, rad, rshot* |Times for each rotation unit.|
-> |*rDirection* |Direction for the rotation. Defination: CW/CCW. See part Macros&Values.|
-> |*rSpeed:* |Speed for the rotation. Unit: rpm.|
+>  *times, deg, rad, rshot:* Times for each rotation unit.
+>  *rDirection:* Direction for the rotation. Defination: CW/CCW. See part Macros&Values.
+>  *rSpeed:* Speed for the rotation. Unit: rpm.
 
 ```C++
 void stepperMotor::sing(uint freq, double duration)
@@ -49,10 +43,8 @@ void stepperMotor::sing(uint freq, double duration)
 >- **Usage**
 >  Make the motor ring.
 >- **Argument**
-> |Argument       |Illustration                 |
-> |---------------|-----------------------------|
-> |*freq:* |The frequency motor rings in. There are some given frequency in C. See part Macros&Values.|
-> |*duration:* |The length motor rings.|
+>  *freq:* The frequency motor rings in. There are some given frequency in C. See part Macros&Values.
+>  *duration:* The length motor rings.
 
 ##Macros&Values
 ###Macros
